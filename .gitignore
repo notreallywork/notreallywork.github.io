@@ -35,4 +35,4 @@ coverage/
 
 # --- Optional: IDE (if you don't share settings) ---
 .vscode/
-.idea/
+.idea/experiments/
