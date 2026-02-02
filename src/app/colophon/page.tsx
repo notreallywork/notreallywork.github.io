@@ -5,11 +5,11 @@ export default function ColophonPage() {
   return (
     <div className="max-w-3xl font-mono">
       <header className="mb-8">
-        <div className="text-[#804400] mb-2">$ cat /etc/colophon</div>
+        <div className="text-[#CC8800] mb-2">$ cat /etc/colophon</div>
         <h1 className="text-3xl font-bold tracking-tight mb-2 text-[#ffb000]">
           Colophon/
         </h1>
-        <p className="text-[#804400]">
+        <p className="text-[#CC8800]">
           About this site, its construction, and its many failures.
         </p>
       </header>
@@ -17,8 +17,8 @@ export default function ColophonPage() {
       <div className="border-t border-[#ffb000] pt-8 space-y-8">
         {/* About */}
         <section>
-          <div className="text-[#804400] text-sm mb-4">$ cat about.txt</div>
-          <div className="text-[#ffb000] space-y-4">
+          <div className="text-[#CC8800] text-sm mb-4">$ cat about.txt</div>
+          <div className="text-[#ffb000] space-y-4 leading-relaxed">
             <p>
               notreally.work is a brutalist, utilitarian archive of experiments—
               things built, things broken, things abandoned. The domain name is 
@@ -34,30 +34,30 @@ export default function ColophonPage() {
 
         {/* Technology */}
         <section>
-          <div className="text-[#804400] text-sm mb-4">$ cat stack.txt</div>
+          <div className="text-[#CC8800] text-sm mb-4">$ cat stack.txt</div>
           <ul className="space-y-2 text-[#ffb000]">
             <li className="flex gap-2">
-              <span className="text-[#804400]">$</span>
+              <span className="text-[#CC8800]">$</span>
               <span>Framework:</span>
               <ExternalLink href="https://nextjs.org">Next.js 14</ExternalLink>
             </li>
             <li className="flex gap-2">
-              <span className="text-[#804400]">$</span>
+              <span className="text-[#CC8800]">$</span>
               <span>Language:</span>
               <ExternalLink href="https://www.typescriptlang.org">TypeScript</ExternalLink>
             </li>
             <li className="flex gap-2">
-              <span className="text-[#804400]">$</span>
+              <span className="text-[#CC8800]">$</span>
               <span>Styling:</span>
               <ExternalLink href="https://tailwindcss.com">Tailwind CSS</ExternalLink>
             </li>
             <li className="flex gap-2">
-              <span className="text-[#804400]">$</span>
+              <span className="text-[#CC8800]">$</span>
               <span>Content:</span>
               <span>Markdown with YAML frontmatter</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-[#804400]">$</span>
+              <span className="text-[#CC8800]">$</span>
               <span>Deployment:</span>
               <ExternalLink href="https://vercel.com">Vercel</ExternalLink>
             </li>
@@ -66,7 +66,7 @@ export default function ColophonPage() {
 
         {/* Design Principles */}
         <section>
-          <div className="text-[#804400] text-sm mb-4">$ cat /etc/nostalgia.conf</div>
+          <div className="text-[#CC8800] text-sm mb-4">$ cat /etc/nostalgia.conf</div>
           <ul className="space-y-2 text-[#ffb000]">
             <li className="flex gap-2">
               <span className="text-[#ff3333]">[ERR]</span>
@@ -81,22 +81,6 @@ export default function ColophonPage() {
               <span>No border-radius (0px everywhere)</span>
             </li>
             <li className="flex gap-2">
-              <span className="text-[#ff3333]">[ERR]</span>
-              <span>No opacity &lt; 1.0 (no faded text)</span>
-            </li>
-            <li className="flex gap-2">
-              <span className="text-[#ff3333]">[ERR]</span>
-              <span>No animations &gt; 200ms duration</span>
-            </li>
-            <li className="flex gap-2">
-              <span className="text-[#ff3333]">[ERR]</span>
-              <span>No parallax scrolling</span>
-            </li>
-            <li className="flex gap-2">
-              <span className="text-[#ff3333]">[ERR]</span>
-              <span>No tile/grid masonry layouts</span>
-            </li>
-            <li className="flex gap-2">
               <span className="text-[#33ff00]">[OK]</span>
               <span>Monospace mandate enforced</span>
             </li>
@@ -107,46 +91,36 @@ export default function ColophonPage() {
           </ul>
         </section>
 
-        {/* Typography */}
+        {/* Colors - FIXED CONTRAST */}
         <section>
-          <div className="text-[#804400] text-sm mb-4">$ fc-list | grep mono</div>
-          <div className="text-[#ffb000] space-y-2">
-            <p>
-              System fonts exclusively—no custom font files, no loading delays.
-            </p>
-            <ul className="space-y-1 pl-4 border-l border-[#804400]">
-              <li className="text-[#804400]">Courier New, Courier, monospace</li>
-              <li className="text-[#804400]">ui-monospace, SFMono-Regular, Menlo, Consolas</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Colors */}
-        <section>
-          <div className="text-[#804400] text-sm mb-4">$ xcolor --palette</div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="text-[#CC8800] text-sm mb-4">$ xcolor --palette</div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-[#ffb000]">
             <div className="border border-[#ffb000]">
               <div className="h-16 bg-[#0a0a0a]"></div>
-              <div className="p-2 text-xs text-[#804400]">
-                Background<br />#0A0A0A
+              <div className="p-2 text-xs">
+                <span className="text-[#CC8800]">Background</span><br />
+                #0A0A0A
               </div>
             </div>
             <div className="border border-[#ffb000]">
               <div className="h-16 bg-[#ffb000]"></div>
-              <div className="p-2 text-xs text-[#804400]">
-                Amber<br />#FFB000
+              <div className="p-2 text-xs">
+                <span className="text-[#CC8800]">Amber</span><br />
+                #FFB000
               </div>
             </div>
             <div className="border border-[#ffb000]">
-              <div className="h-16 bg-[#804400]"></div>
-              <div className="p-2 text-xs text-[#804400]">
-                Dim<br />#804400
+              <div className="h-16 bg-[#CC8800]"></div>
+              <div className="p-2 text-xs">
+                <span className="text-[#CC8800]">Dim</span><br />
+                #CC8800
               </div>
             </div>
             <div className="border border-[#ffb000]">
               <div className="h-16 bg-[#ff3333]"></div>
-              <div className="p-2 text-xs text-[#804400]">
-                Error<br />#FF3333
+              <div className="p-2 text-xs">
+                <span className="text-[#CC8800]">Error</span><br />
+                #FF3333
               </div>
             </div>
           </div>
@@ -154,7 +128,7 @@ export default function ColophonPage() {
 
         {/* Contact */}
         <section>
-          <div className="text-[#804400] text-sm mb-4">$ cat /etc/contact</div>
+          <div className="text-[#CC8800] text-sm mb-4">$ cat /etc/contact</div>
           <p className="text-[#ffb000]">
             For questions, bug reports, or to say hello:{' '}
             <ExternalLink href="https://github.com">github↗</ExternalLink>
@@ -166,7 +140,7 @@ export default function ColophonPage() {
       <footer className="mt-12 pt-6 border-t border-[#ffb000]">
         <Link
           href="/"
-          className="text-[#804400] hover:text-[#ffb000] underline"
+          className="text-[#CC8800] hover:text-[#ffb000] underline"
         >
           $ cd ~
         </Link>

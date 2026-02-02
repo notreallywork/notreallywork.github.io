@@ -3,7 +3,7 @@
 :root {
   --terminal-bg: #0a0a0a;
   --terminal-amber: #ffb000;
-  --terminal-dim: #804400;
+  --terminal-dim: #CC8800;
   --terminal-red: #ff3333;
   --terminal-green: #33ff00;
   --terminal-border: #ffb000;
@@ -13,7 +13,7 @@
 @theme inline {
   --color-background: #0a0a0a;
   --color-foreground: #ffb000;
-  --color-muted: #804400;
+  --color-muted: #CC8800;
   --color-accent: #ffb000;
   --color-border: #ffb000;
   --color-red: #ff3333;
@@ -109,7 +109,7 @@ a:hover {
 /* Status colors */
 .status-functional { color: #33ff00; }
 .status-experimental { color: #ffb000; }
-.status-abandoned { color: #804400; }
+.status-abandoned { color: #CC8800; }
 .status-broken { color: #ff3333; }
 
 /* Markdown content - Terminal */
@@ -138,14 +138,14 @@ a:hover {
 }
 
 .markdown-body li::marker {
-  color: #804400;
+  color: #CC8800;
 }
 
 .markdown-body code {
   background: rgba(255, 176, 0, 0.1);
   padding: 2px 6px;
   color: #ffb000;
-  border: 1px solid #804400;
+  border: 1px solid #CC8800;
 }
 
 .markdown-body pre {
@@ -153,7 +153,7 @@ a:hover {
   padding: 16px;
   overflow-x: auto;
   margin-bottom: 16px;
-  border: 1px solid #804400;
+  border: 1px solid #CC8800;
 }
 
 .markdown-body img {
@@ -167,7 +167,7 @@ a:hover {
   border-left: 2px solid #ffb000;
   padding-left: 16px;
   margin: 24px 0;
-  color: #804400;
+  color: #CC8800;
   font-style: italic;
 }
 

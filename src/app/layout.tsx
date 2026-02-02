@@ -28,7 +28,7 @@ export default function RootLayout({
         <main className="lg:ml-[280px] min-h-screen border-l border-[#ffb000]">
           <div className="px-4 py-6 lg:px-8 lg:py-12 max-w-4xl">
             {/* Terminal prompt header */}
-            <div className="mb-8 text-sm text-[#804400]">
+            <div className="mb-8 text-sm text-[#CC8800]">
               user@notreally:~$ cat /var/www/index.html
             </div>
             
@@ -41,8 +41,8 @@ export default function RootLayout({
           </div>
         </main>
         
-        <footer className="lg:ml-[280px] border-t border-l border-[#ffb000] px-4 py-6 lg:px-8 bg-[#0a0a0a] text-sm text-[#804400]">
-          <p>$ echo "© 2025 Not Really Working, Ltd" && exit</p>
+        <footer className="lg:ml-[280px] border-t border-l border-[#ffb000] px-4 py-6 lg:px-8 bg-[#0a0a0a] text-sm text-[#CC8800]">
+          <p>$ echo "© 2026 Not Really Working, Ltd" && exit</p>
         </footer>
       </body>
     </html>
