@@ -1,0 +1,38 @@
+# --- SSH KEYS (NEVER COMMIT) ---
+*.pem
+*.key
+*.pub
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+
+# --- Node / Next ---
+node_modules/
+.next/
+dist/
+out/
+
+# --- Env ---
+.env
+.env.local
+.env.*.local
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Testing (future-proof) ---
+coverage/
+.nyc_output/
+
+# --- Cache ---
+.eslintcache
+.cache/
+
+# --- Optional: IDE (if you don't share settings) ---
+.vscode/
+.idea/

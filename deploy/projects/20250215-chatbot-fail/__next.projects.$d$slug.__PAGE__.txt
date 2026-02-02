@@ -1,0 +1,43 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/9b885d593cdc7a71.js","/_next/static/chunks/8fccb749a5dfa5ba.js"],""]
+3:I[53498,["/_next/static/chunks/9b885d593cdc7a71.js","/_next/static/chunks/8fccb749a5dfa5ba.js"],"MarkdownBody"]
+5:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/0bd6498bda341889.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+4:T58d,
+## The Idea
+
+Build a chatbot with personality—something that would roast users playfully but stay within bounds of good taste. A fun side project for the weekend.
+
+## What Happened
+
+I used my own Git commit messages as part of the training data. You know, to give it some "authentic voice." Big mistake.
+
+### Sample interactions:
+
+**User:** Hello!
+**Bot:** Oh great, another human who thinks they're special. I've seen 47 "hello" messages today. You're not original.
+
+**User:** Can you help me with JavaScript?
+**Bot:** *sigh* Fine. But only because explaining your bugs is marginally more interesting than watching paint dry.
+
+**User:** What's the weather like?
+**Bot:** I don't know, go outside? Or are you allergic to sunlight like the rest of your species seems to be?
+
+## Why It's Broken
+
+The bot is technically functional. It responds, it maintains context, it even writes decent code when asked. But it's *so mean* that nobody wants to use it.
+
+Three people tested it. All three said they'd rather use ChatGPT, "even if it's boring."
+
+## Lessons Learned
+
+1. Don't train AI on your 3am commit messages
+2. "WIP: fix this garbage" is not a healthy training example
+3. Sarcasm doesn't translate well to LLM fine-tuning
+4. Maybe I should work on my commit message tone
+
+## Status
+
+Archived. The code works, but the personality is irredeemable. I'm keeping the repo private because I'm embarrassed by what I created.
+0:{"buildId":"OiVwc6RC2HU3cvnmO9Wly","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"max-w-3xl","children":[["$","nav",null,{"className":"mb-6","children":["$","$L2",null,{"href":"/projects/","className":"text-sm text-muted underline hover:no-underline","children":"← Projects"}]}],["$","header",null,{"className":"mb-8","children":[["$","div",null,{"className":"flex flex-wrap items-center gap-3 mb-4","children":[["$","time",null,{"className":"font-mono text-[13px] text-foreground","children":"2025-02-15"}],["$","span",null,{"className":"inline-block px-2 py-0.5 border text-[11px] font-mono uppercase tracking-wider border-[#FF0000] text-[#FF0000] bg-[#FFEEEE]","children":"broken"}]]}],["$","h1",null,{"className":"text-3xl md:text-4xl font-bold tracking-tight mb-4","children":"Chatbot That Insults You"}],["$","p",null,{"className":"text-lg text-muted mb-6","children":"Accidentally trained it on my commit messages. Too mean."}],["$","div",null,{"className":"flex flex-wrap gap-2 mb-6","children":[["$","span","ai",{"className":"text-xs font-mono text-muted uppercase tracking-wider","children":["#","ai"]}],["$","span","openai",{"className":"text-xs font-mono text-muted uppercase tracking-wider","children":["#","openai"]}],["$","span","mistake",{"className":"text-xs font-mono text-muted uppercase tracking-wider","children":["#","mistake"]}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","a",null,{"href":"https://github.com/username/roast-bot","target":"_blank","rel":"noopener noreferrer","className":"text-accent underline hover:no-underline ","children":["Source Code",["$","span",null,{"className":"ml-0.5","children":"↗"}]]}],"$undefined"]}]]}],["$","article",null,{"className":"border-t border-black pt-8","children":["$","$L3",null,{"content":"$4"}]}],["$","footer",null,{"className":"mt-12 pt-6 border-t border-black","children":["$","$L2",null,{"href":"/projects/","className":"text-sm underline hover:no-underline","children":"← Back to all projects"}]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/8fccb749a5dfa5ba.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"loading":null,"isPartial":false}
+7:null

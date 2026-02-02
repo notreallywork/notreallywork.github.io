@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+:root {
+  --terminal-bg: #0a0a0a;
+  --terminal-amber: #ffb000;
+  --terminal-dim: #804400;
+  --terminal-red: #ff3333;
+  --terminal-green: #33ff00;
+  --terminal-border: #ffb000;
+  --terminal-hover: rgba(255, 176, 0, 0.1);
+}
+
+@theme inline {
+  --color-background: #0a0a0a;
+  --color-foreground: #ffb000;
+  --color-muted: #804400;
+  --color-accent: #ffb000;
+  --color-border: #ffb000;
+  --color-red: #ff3333;
+  --color-green: #33ff00;
+  --font-sans: 'Courier New', Courier, monospace;
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+/* Force monospace everywhere */
+* {
+  border-radius: 0 !important;
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
+html {
+  scroll-behavior: auto;
+  background: #0a0a0a;
+}
+
+body {
+  background: #0a0a0a;
+  color: #ffb000;
+  line-height: 1.6;
+  /* Subtle scanline effect */
+  background-image: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  min-height: 100vh;
+}
+
+/* Links - Terminal style */
+a {
+  color: #ffb000;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  background: #ffb000;
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+/* Selection - Inverse terminal colors */
+::selection {
+  background: #ffb000;
+  color: #0a0a0a;
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 2px solid #ffb000;
+  outline-offset: 2px;
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffb000;
+  border: 2px solid #0a0a0a;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+/* Mobile nav details styling */
+.mobile-nav summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.mobile-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Status colors */
+.status-functional { color: #33ff00; }
+.status-experimental { color: #ffb000; }
+.status-abandoned { color: #804400; }
+.status-broken { color: #ff3333; }
+
+/* Markdown content - Terminal */
+.markdown-body h2 {
+  font-size: 20px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: #ffb000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.markdown-body p {
+  margin-bottom: 16px;
+  color: #ffb000;
+}
+
+.markdown-body ul, .markdown-body ol {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.markdown-body li {
+  margin-bottom: 4px;
+  color: #ffb000;
+}
+
+.markdown-body li::marker {
+  color: #804400;
+}
+
+.markdown-body code {
+  background: rgba(255, 176, 0, 0.1);
+  padding: 2px 6px;
+  color: #ffb000;
+  border: 1px solid #804400;
+}
+
+.markdown-body pre {
+  background: rgba(255, 176, 0, 0.05);
+  padding: 16px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+  border: 1px solid #804400;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  display: block;
+  margin: 24px 0;
+  border: 1px solid #ffb000;
+}
+
+.markdown-body blockquote {
+  border-left: 2px solid #ffb000;
+  padding-left: 16px;
+  margin: 24px 0;
+  color: #804400;
+  font-style: italic;
+}
+
+/* Markdown table column widths */
+.markdown-body table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.markdown-body th:first-child,
+.markdown-body td:first-child {
+  width: 45%;
+  text-align: left;
+}
+
+.markdown-body th:nth-child(2),
+.markdown-body td:nth-child(2) {
+  width: 25%;
+  text-align: left;
+}
+
+.markdown-body th:nth-child(3),
+.markdown-body td:nth-child(3) {
+  width: 30%;
+  text-align: left;
+}

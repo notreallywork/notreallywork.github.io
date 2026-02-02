@@ -1,0 +1,56 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/9b885d593cdc7a71.js","/_next/static/chunks/8fccb749a5dfa5ba.js"],""]
+3:I[53498,["/_next/static/chunks/9b885d593cdc7a71.js","/_next/static/chunks/8fccb749a5dfa5ba.js"],"MarkdownBody"]
+6:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/0bd6498bda341889.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+4:T604,
+## Overview
+
+The site you're looking at right now. A brutalist, utilitarian archive built with Next.js 14 and TypeScript. No animations, no gradients, no nonsense.
+
+## Features
+
+- **Markdown-based content**: Projects and logs stored as `.md` files with YAML frontmatter
+- **Auto-generated navigation**: Sidebar builds itself from content files
+- **Static export**: Deployed as static HTML for maximum reliability
+- **Zero client-side JavaScript**: (Okay, minimal JS for the mobile menu)
+
+## Design Decisions
+
+### Why brutalism?
+
+Because everything else looks the same. Smooth gradients, rounded corners, subtle shadows—it's all starting to blur together. This site is intentionally jarring.
+
+### Why no animations?
+
+They break. Or they slow things down. Or they trigger motion sickness. Static is reliable.
+
+### Why the red?
+
+It's alarming. It draws attention to links and errors. It matches the feeling of seeing a production bug at 2am.
+
+## Technical Stack
+
+| Layer | Technology |
+|-------|------------|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript (strict mode) |
+| Styling | Tailwind CSS |
+| Content | Markdown + gray-matter |
+| Deployment | Vercel (static export) |
+
+## What Works
+
+- Content management via git
+- Fast build times
+- Perfect Lighthouse scores
+- No dependencies on external APIs
+
+## What's Next
+
+Probably nothing. This site is "done" in the sense that it does what it needs to do. Any additional features would violate the principle of minimalism.
+
+But I'll probably redesign it in 6 months anyway.
+0:{"buildId":"OiVwc6RC2HU3cvnmO9Wly","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"max-w-3xl","children":[["$","nav",null,{"className":"mb-6","children":["$","$L2",null,{"href":"/projects/","className":"text-sm text-muted underline hover:no-underline","children":"← Projects"}]}],["$","header",null,{"className":"mb-8","children":[["$","div",null,{"className":"flex flex-wrap items-center gap-3 mb-4","children":[["$","time",null,{"className":"font-mono text-[13px] text-foreground","children":"2025-03-01"}],["$","span",null,{"className":"inline-block px-2 py-0.5 border text-[11px] font-mono uppercase tracking-wider border-black text-black","children":"functional"}]]}],["$","h1",null,{"className":"text-3xl md:text-4xl font-bold tracking-tight mb-4","children":"This Very Website"}],["$","p",null,{"className":"text-lg text-muted mb-6","children":"A static site that actually works. Miracles happen."}],["$","div",null,{"className":"flex flex-wrap gap-2 mb-6","children":[["$","span","nextjs",{"className":"text-xs font-mono text-muted uppercase tracking-wider","children":["#","nextjs"]}],["$","span","typescript",{"className":"text-xs font-mono text-muted uppercase tracking-wider","children":["#","typescript"]}],["$","span","brutalism",{"className":"text-xs font-mono text-muted uppercase tracking-wider","children":["#","brutalism"]}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","a",null,{"href":"https://github.com/username/notreally-work","target":"_blank","rel":"noopener noreferrer","className":"text-accent underline hover:no-underline ","children":["Source Code",["$","span",null,{"className":"ml-0.5","children":"↗"}]]}],["$","a",null,{"href":"https://notreally.work","target":"_blank","rel":"noopener noreferrer","className":"text-accent underline hover:no-underline ","children":["Live Demo",["$","span",null,{"className":"ml-0.5","children":"↗"}]]}]]}]]}],["$","article",null,{"className":"border-t border-black pt-8","children":["$","$L3",null,{"content":"$4"}]}],["$","footer",null,{"className":"mt-12 pt-6 border-t border-black","children":["$","$L2",null,{"href":"/projects/","className":"text-sm underline hover:no-underline","children":"← Back to all projects"}]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/8fccb749a5dfa5ba.js","async":true}]],"$L5"]}],"loading":null,"isPartial":false}
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null
