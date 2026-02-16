@@ -1,0 +1,38 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/9b885d593cdc7a71.js","/_next/static/chunks/8fccb749a5dfa5ba.js"],""]
+3:I[53498,["/_next/static/chunks/9b885d593cdc7a71.js","/_next/static/chunks/8fccb749a5dfa5ba.js"],"MarkdownBody"]
+5:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/0bd6498bda341889.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+4:T404,
+Spent 4 hours debugging a layout issue that only appeared in Firefox. Turns out it was a missing `min-width: 0` on a flex child.
+
+## The bug
+
+A grid layout with `grid-template-columns: 100px 1fr 90px 1fr 60px` was overflowing its container in Firefox but not Chrome or Safari. The content in the second `1fr` column was pushing everything out.
+
+## The fix
+
+```css
+.grid-cell {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+```
+
+That's it. One line. Four hours.
+
+## Why this happens
+
+Firefox treats flex/grid children differently when calculating intrinsic sizes. By default, flex items won't shrink below their minimum content size. Chrome and Safari seem to handle this more gracefully, but Firefox is technically correct per the spec.
+
+## The real lesson
+
+Always test in Firefox during development, not just at the end. Also, `min-width: 0` is your friend in grid/flex layouts with text truncation.
+
+## Mood
+
+Tired. Going to bed. Tomorrow I'll probably find three more Firefox bugs.
+0:{"buildId":"OiVwc6RC2HU3cvnmO9Wly","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"max-w-3xl","children":[["$","nav",null,{"className":"mb-6","children":["$","$L2",null,{"href":"/logs/","className":"text-sm text-muted underline hover:no-underline","children":"← Logs"}]}],["$","header",null,{"className":"mb-8","children":[["$","div",null,{"className":"flex flex-wrap items-center gap-3 mb-4","children":[["$","time",null,{"className":"font-mono text-[13px] text-foreground","children":"2025-02-15"}],["$","span",null,{"className":"text-sm font-mono","title":"Mood: confused","children":["🤔"," ","Confused"]}]]}],["$","h1",null,{"className":"text-3xl md:text-4xl font-bold tracking-tight mb-4","children":"Debug hell"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","span","debugging",{"className":"text-xs font-mono text-muted uppercase tracking-wider","children":["#","debugging"]}],["$","span","css",{"className":"text-xs font-mono text-muted uppercase tracking-wider","children":["#","css"]}],["$","span","firefox",{"className":"text-xs font-mono text-muted uppercase tracking-wider","children":["#","firefox"]}]]}]]}],["$","article",null,{"className":"border-t border-black pt-8","children":["$","$L3",null,{"content":"$4"}]}],["$","footer",null,{"className":"mt-12 pt-6 border-t border-black","children":["$","$L2",null,{"href":"/logs/","className":"text-sm underline hover:no-underline","children":"← Back to all logs"}]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/8fccb749a5dfa5ba.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"loading":null,"isPartial":false}
+7:null
