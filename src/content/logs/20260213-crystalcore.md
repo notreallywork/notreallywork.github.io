@@ -8,7 +8,7 @@ tags: ["crystalcore", "gamedev", "math", "shooter", "pwa", "sibling-optimized"]
 Three major pivots to get this right. Started as an endless runner, became a lane shooter, ended up as a free-movement space shooter with RPG progression.
 
 ## The Pivot: Runner → Shooter
-Original design was Temple Run with math gates. Boring. Kids just stared at the screen. Pivoted to active shooting: you blast geometric rocks, collect crystal shards, and recharge your weapon by solving math problems at gates. Suddenly Emerson (7) and Kyra (11) both engaged—one spraying auto-fire, the other sniping from corners.
+Original design was Temple Run with math gates. Boring. Kids just stared at the screen. Pivoted to active shooting: you blast geometric rocks, collect crystal shards, and recharge your weapon by solving math problems at gates. Suddenly the kids are both engaged — shooting while solving math.
 
 ## Virtual Joystick & Controls
 Mouse drag was too fast (teleporting), keyboard too slow. Built a floating virtual joystick that appears on touch. 55px radius, 5px dead zone, cyan visual feedback. Movement now feels consistent across tablet and desktop. Spacebar pauses. No more accidental profile switching.
