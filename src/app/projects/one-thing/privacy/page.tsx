@@ -1,10 +1,12 @@
----
-title: "One Thing Privacy Policy"
-date: "2026-03-03"
-tags: ["legal", "one-thing", "privacy"]
----
+import Link from 'next/link';
+import { MarkdownBody } from '@/components/ui/MarkdownBody';
+import type { Metadata } from 'next';
 
-## ONE THING PRIVACY POLICY
+export const metadata: Metadata = {
+  title: 'One Thing Privacy Policy — notreally.work',
+};
+
+const privacyContent = `## ONE THING PRIVACY POLICY
 
 Last updated: 2026-03-03
 
@@ -54,8 +56,33 @@ If this policy changes, we will notify you in the app before any data practices 
 
 ### Contact
 
-Questions: user@notreally.work  
+Questions: user@notreally.work
+`;
 
----
+export default function OneThingPrivacyPage() {
+  return (
+    <div className="max-w-3xl">
+      <nav className="mb-6">
+        <Link
+          href="/projects/one-thing/"
+          className="text-sm text-muted underline hover:no-underline"
+        >
+          ← One Thing
+        </Link>
+      </nav>
 
-$ cat /dev/null &gt; data-collection.log
+      <article className="markdown-body border-t border-black pt-8">
+        <MarkdownBody content={privacyContent} />
+      </article>
+
+      <footer className="mt-12 pt-6 border-t border-black">
+        <Link
+          href="/projects/one-thing/"
+          className="text-sm underline hover:no-underline"
+        >
+          ← Back to One Thing
+        </Link>
+      </footer>
+    </div>
+  );
+}
