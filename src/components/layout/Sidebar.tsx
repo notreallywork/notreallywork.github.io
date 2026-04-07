@@ -21,48 +21,44 @@ export function Sidebar() {
         {/* Projects Directory */}
         <nav className="mb-8">
           <div className="text-[#CC8800] text-sm mb-2">$ ls projects/</div>
-          <div className="pl-2 space-y-1 border-l border-[#CC8800]/30">
+          <div className="pl-2 space-y-0.5 border-l border-[#CC8800]/30">
             {projects.slice(0, 5).map((project) => (
               <Link
                 key={project.slug}
                 href={`/projects/${project.slug}/`}
-                className="block text-sm text-[#ffb000] hover:bg-[#ffb000] hover:text-[#0a0a0a] px-2 py-1 -ml-2 underline-offset-2"
+                className="block text-sm text-[#ffb000] hover:bg-[#ffb000] hover:text-[#0a0a0a] px-2 py-1.5 -ml-2"
               >
-                <span className="text-[#CC8800]">drwxr-xr-x </span>
-                <span className="text-[#CC8800]">{project.date} </span>
-                {project.slug}/
+                {project.title}
               </Link>
             ))}
           </div>
           <Link
             href="/projects/"
-            className="inline-block mt-2 text-xs text-[#CC8800] hover:text-[#ffb000] underline"
+            className="inline-block mt-2 text-xs text-[#4a3400] hover:text-[#CC8800]"
           >
-            $ ls -la projects/
+            $ ls -la
           </Link>
         </nav>
 
         {/* Logs Directory */}
         <nav className="mb-8">
           <div className="text-[#CC8800] text-sm mb-2">$ ls logs/</div>
-          <div className="pl-2 space-y-1 border-l border-[#CC8800]/30">
+          <div className="pl-2 space-y-0.5 border-l border-[#CC8800]/30">
             {logs.slice(0, 3).map((log) => (
               <Link
                 key={log.slug}
                 href={`/logs/${log.slug}/`}
-                className="block text-sm text-[#ffb000] hover:bg-[#ffb000] hover:text-[#0a0a0a] px-2 py-1 -ml-2 underline-offset-2"
+                className="block text-sm text-[#ffb000] hover:bg-[#ffb000] hover:text-[#0a0a0a] px-2 py-1.5 -ml-2"
               >
-                <span className="text-[#CC8800]">-rw-r--r-- </span>
-                <span className="text-[#CC8800]">{log.date} </span>
-                {log.slug}.md
+                {log.title}
               </Link>
             ))}
           </div>
           <Link
             href="/logs/"
-            className="inline-block mt-2 text-xs text-[#CC8800] hover:text-[#ffb000] underline"
+            className="inline-block mt-2 text-xs text-[#4a3400] hover:text-[#CC8800]"
           >
-            $ ls -la logs/
+            $ ls -la
           </Link>
         </nav>
 

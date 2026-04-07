@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { Header } from "@/components/layout/Header";
 import { getProjectNavItems, getLogNavItems } from "@/lib/content";
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "notreally.work — Experimental Archive",
@@ -19,22 +28,15 @@ export default function RootLayout({
   const logs = getLogNavItems();
 
   return (
-    <html lang="en">
+    <html lang="en" className={jetbrainsMono.variable}>
       <body className="antialiased min-h-screen bg-[#0a0a0a] text-[#ffb000] font-mono">
-        {/* Pass data as props to Header */}
         <Header projects={projects} logs={logs} />
         <Sidebar />
-        
+
         <main className="lg:ml-[280px] min-h-screen border-l border-[#ffb000]">
           <div className="px-4 py-6 lg:px-8 lg:py-12 max-w-4xl">
-            {/* Terminal prompt header */}
-            <div className="mb-8 text-sm text-[#CC8800]">
-              user@notreally:~$ cat /var/www/index.html
-            </div>
-            
             {children}
-            
-            {/* Blinking cursor footer */}
+
             <div className="mt-16 text-[#ffb000]">
               user@notreally:~$ <span className="cursor-blink">_</span>
             </div>

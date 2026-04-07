@@ -4,6 +4,7 @@
   --terminal-bg: #0a0a0a;
   --terminal-amber: #ffb000;
   --terminal-dim: #CC8800;
+  --terminal-chrome: #4a3400;   /* decorative elements: dates, permission strings */
   --terminal-red: #ff3333;
   --terminal-green: #33ff00;
   --terminal-border: #ffb000;
@@ -18,14 +19,14 @@
   --color-border: #ffb000;
   --color-red: #ff3333;
   --color-green: #33ff00;
-  --font-sans: 'Courier New', Courier, monospace;
-  --font-mono: 'Courier New', Courier, monospace;
+  --font-sans: var(--font-jetbrains), 'Courier New', Courier, monospace;
+  --font-mono: var(--font-jetbrains), 'Courier New', Courier, monospace;
 }
 
 /* Force monospace everywhere */
 * {
   border-radius: 0 !important;
-  font-family: 'Courier New', Courier, monospace !important;
+  font-family: var(--font-jetbrains), 'Courier New', Courier, monospace !important;
 }
 
 html {
@@ -36,13 +37,7 @@ html {
 body {
   background: #0a0a0a;
   color: #ffb000;
-  line-height: 1.6;
-  /* Subtle scanline effect */
-  background-image: linear-gradient(
-    rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.25) 50%
-  );
-  background-size: 100% 4px;
+  line-height: 1.75;
   min-height: 100vh;
 }
 
@@ -114,17 +109,23 @@ a:hover {
 
 /* Markdown content - Terminal */
 .markdown-body h2 {
-  font-size: 20px;
-  margin-top: 32px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 36px;
   margin-bottom: 16px;
   color: #ffb000;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
+}
+
+.markdown-body h2::before {
+  content: '## ';
+  color: #4a3400;
 }
 
 .markdown-body p {
   margin-bottom: 16px;
-  color: #ffb000;
+  color: #CC8800;
+  line-height: 1.8;
 }
 
 .markdown-body ul, .markdown-body ol {
@@ -133,12 +134,12 @@ a:hover {
 }
 
 .markdown-body li {
-  margin-bottom: 4px;
-  color: #ffb000;
+  margin-bottom: 6px;
+  color: #CC8800;
 }
 
 .markdown-body li::marker {
-  color: #CC8800;
+  color: #4a3400;
 }
 
 .markdown-body code {

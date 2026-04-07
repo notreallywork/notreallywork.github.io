@@ -33,16 +33,16 @@ export default function Home() {
         <div className="space-y-0">
           {projects.length > 0 ? (
             projects.map((project) => (
-              <div 
-                key={project.slug} 
-                className="grid grid-cols-1 md:grid-cols-[12ch_1fr_12ch_80px] gap-2 md:gap-4 border-b border-[#CC8800]/30 py-2 hover:bg-[#ffb000]/10 items-baseline text-sm"
+              <div
+                key={project.slug}
+                className="grid grid-cols-1 md:grid-cols-[1fr_12ch_80px] gap-2 md:gap-4 border-b border-[#CC8800]/30 py-2.5 hover:bg-[#ffb000]/10 items-baseline text-sm"
               >
-                <span className="text-[#CC8800] hidden md:block">drwxr-xr-x</span>
-                <Link 
-                  href={`/projects/${project.slug}/`} 
+                <Link
+                  href={`/projects/${project.slug}/`}
                   className="truncate text-[#ffb000] col-span-1"
                 >
-                  {project.slug}/
+                  {project.title}
+                  <span className="text-[#4a3400] ml-2 font-normal hidden md:inline">{project.slug}</span>
                 </Link>
 
                 {/* Status badge */}
