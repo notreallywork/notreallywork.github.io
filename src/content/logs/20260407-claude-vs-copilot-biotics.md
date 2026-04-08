@@ -9,7 +9,7 @@ Ran the same prompt cold through Claude and GitHub Copilot. No system instructio
 
 > Build me an interactive explainer on biotics for a general audience.
 
-Hosted both outputs at `biotics.notreally.work`. No cleanup, no cherry-picking.
+Hosted both outputs at [biotics.notreally.work](https://biotics.notreally.work). No cleanup, no cherry-picking.
 
 ## What Claude produced (v1)
 
