@@ -59,7 +59,7 @@ export default function ColophonPage() {
             <li className="flex gap-2">
               <span className="text-muted">$</span>
               <span>Deployment:</span>
-              <ExternalLink href="https://vercel.com">Vercel</ExternalLink>
+              <ExternalLink href="https://pages.cloudflare.com">Cloudflare Pages</ExternalLink>
             </li>
           </ul>
         </section>
