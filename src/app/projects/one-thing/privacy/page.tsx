@@ -71,11 +71,11 @@ export default function OneThingPrivacyPage() {
         </Link>
       </nav>
 
-      <article className="markdown-body border-t border-black pt-8">
+      <article className="markdown-body border-t border-border pt-8">
         <MarkdownBody content={privacyContent} />
       </article>
 
-      <footer className="mt-12 pt-6 border-t border-black">
+      <footer className="mt-12 pt-6 border-t border-border">
         <Link
           href="/projects/one-thing/"
           className="text-sm underline hover:no-underline"

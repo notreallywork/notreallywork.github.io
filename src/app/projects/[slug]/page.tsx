@@ -98,12 +98,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </header>
 
       {/* Content */}
-      <article className="markdown-body border-t border-black pt-8">
+      <article className="markdown-body border-t border-border pt-8">
         <MarkdownBody content={project.content} />
       </article>
 
       {/* Footer navigation */}
-      <footer className="mt-12 pt-6 border-t border-black">
+      <footer className="mt-12 pt-6 border-t border-border">
         <Link
           href="/projects/"
           className="text-sm underline hover:no-underline"

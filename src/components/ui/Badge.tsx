@@ -7,10 +7,10 @@ interface BadgeProps {
 }
 
 const statusStyles: Record<Status, string> = {
-  functional: 'border-black text-black',
-  experimental: 'border-[#CC8800] text-[#CC8800]',
-  abandoned: 'border-[#888888] text-[#666666]',
-  broken: 'border-[#FF0000] text-[#FF0000] bg-[#FFEEEE]',
+  functional:   'border-green text-green',
+  experimental: 'border-muted text-muted',
+  abandoned:    'border-chrome text-chrome',
+  broken:       'border-red text-red',
 };
 
 export function Badge({ status }: BadgeProps) {

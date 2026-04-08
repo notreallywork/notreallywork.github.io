@@ -13,7 +13,7 @@ export function ProjectRow({ project }: ProjectRowProps) {
   const externalUrl = project.demo || (project.github ? `https://github.com/${project.github}` : null);
 
   return (
-    <article className="group border-b border-black py-4 hover:bg-hover-bg transition-colors duration-100">
+    <article className="group border-b border-border py-4 hover:bg-[var(--hover-bg)] transition-colors duration-100">
       {/* Desktop view */}
       <div className="hidden md:grid grid-cols-[100px_1fr_90px_1fr_60px] gap-6 items-baseline px-2 -mx-2">
         <DateBlock date={project.date} />
@@ -44,7 +44,7 @@ export function ProjectRow({ project }: ProjectRowProps) {
       </div>
 
       {/* Mobile view */}
-      <div className="md:hidden border border-black p-4">
+      <div className="md:hidden border border-border p-4">
         <Link
           href={`/projects/${project.slug}/`}
           className="text-lg font-bold underline hover:no-underline block mb-2"

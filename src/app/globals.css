@@ -1,24 +1,47 @@
 @import "tailwindcss";
 
+/* ─── Dark mode (default) ───────────────────────────────────── */
 :root {
-  --terminal-bg: #0a0a0a;
-  --terminal-amber: #ffb000;
-  --terminal-dim: #CC8800;
-  --terminal-chrome: #4a3400;   /* decorative elements: dates, permission strings */
-  --terminal-red: #ff3333;
-  --terminal-green: #33ff00;
-  --terminal-border: #ffb000;
-  --terminal-hover: rgba(255, 176, 0, 0.1);
+  --bg:           #0a0a0a;
+  --fg:           #ffb000;
+  --dim:          #CC8800;
+  --chrome:       #4a3400;
+  --border:       #ffb000;
+  --border-dim:   #CC8800;
+  --green:        #33ff00;
+  --red:          #ff3333;
+  --hover-bg:     rgba(255, 176, 0, 0.1);
+  --scrollbar-bg: #0a0a0a;
+  --scrollbar-thumb: #ffb000;
 }
 
+/* ─── Light mode ────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg:           #F5F0E8;
+  --fg:           #1A1000;
+  --dim:          #6B4400;
+  --chrome:       #A07840;
+  --border:       #B87800;
+  --border-dim:   #9A6A20;
+  --green:        #1A6800;
+  --red:          #C02000;
+  --hover-bg:     rgba(139, 90, 0, 0.1);
+  --scrollbar-bg: #F5F0E8;
+  --scrollbar-thumb: #B87800;
+}
+
+/* ─── Tailwind theme tokens (reference CSS vars) ─────────────── */
 @theme inline {
-  --color-background: #0a0a0a;
-  --color-foreground: #ffb000;
-  --color-muted: #CC8800;
-  --color-accent: #ffb000;
-  --color-border: #ffb000;
-  --color-red: #ff3333;
-  --color-green: #33ff00;
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-muted:      var(--dim);
+  --color-chrome:     var(--chrome);
+  --color-accent:     var(--fg);
+  --color-border:     var(--border);
+  --color-border-dim: var(--border-dim);
+  --color-red:        var(--red);
+  --color-green:      var(--green);
+  --color-hover-bg:   var(--hover-bg);
   --font-sans: var(--font-jetbrains), 'Courier New', Courier, monospace;
   --font-mono: var(--font-jetbrains), 'Courier New', Courier, monospace;
 }
@@ -31,42 +54,43 @@
 
 html {
   scroll-behavior: auto;
-  background: #0a0a0a;
+  background: var(--bg);
 }
 
 body {
-  background: #0a0a0a;
-  color: #ffb000;
+  background: var(--bg);
+  color: var(--fg);
   line-height: 1.75;
   min-height: 100vh;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* Links - Terminal style */
+/* Links */
 a {
-  color: #ffb000;
+  color: var(--fg);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 a:hover {
-  background: #ffb000;
-  color: #0a0a0a;
+  background: var(--fg);
+  color: var(--bg);
   text-decoration: none;
 }
 
-/* Selection - Inverse terminal colors */
+/* Selection */
 ::selection {
-  background: #ffb000;
-  color: #0a0a0a;
+  background: var(--fg);
+  color: var(--bg);
 }
 
-/* Focus states */
+/* Focus */
 :focus-visible {
-  outline: 2px solid #ffb000;
+  outline: 2px solid var(--fg);
   outline-offset: 2px;
 }
 
-/* Cursor blink animation */
+/* Cursor blink */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -76,55 +100,52 @@ a:hover {
   animation: blink 1s step-end infinite;
 }
 
-/* Scrollbar styling */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
-  background: #0a0a0a;
+  background: var(--scrollbar-bg);
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #ffb000;
-  border: 2px solid #0a0a0a;
+  background: var(--scrollbar-thumb);
+  border: 2px solid var(--scrollbar-bg);
 }
-
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: var(--scrollbar-bg);
 }
 
-/* Mobile nav details styling */
+/* Mobile nav */
 .mobile-nav summary {
   list-style: none;
   cursor: pointer;
 }
-
 .mobile-nav summary::-webkit-details-marker {
   display: none;
 }
 
 /* Status colors */
-.status-functional { color: #33ff00; }
-.status-experimental { color: #ffb000; }
-.status-abandoned { color: #CC8800; }
-.status-broken { color: #ff3333; }
+.status-functional   { color: var(--green); }
+.status-experimental { color: var(--fg); }
+.status-abandoned    { color: var(--dim); }
+.status-broken       { color: var(--red); }
 
-/* Markdown content - Terminal */
+/* ─── Markdown body ─────────────────────────────────────────── */
 .markdown-body h2 {
   font-size: 16px;
   font-weight: 700;
   margin-top: 36px;
   margin-bottom: 16px;
-  color: #ffb000;
+  color: var(--fg);
   letter-spacing: 0.03em;
 }
 
 .markdown-body h2::before {
   content: '## ';
-  color: #4a3400;
+  color: var(--chrome);
 }
 
 .markdown-body p {
   margin-bottom: 16px;
-  color: #CC8800;
+  color: var(--dim);
   line-height: 1.8;
 }
 
@@ -135,44 +156,43 @@ a:hover {
 
 .markdown-body li {
   margin-bottom: 6px;
-  color: #CC8800;
+  color: var(--dim);
 }
 
 .markdown-body li::marker {
-  color: #4a3400;
+  color: var(--chrome);
 }
 
 .markdown-body code {
-  background: rgba(255, 176, 0, 0.1);
+  background: rgba(128, 80, 0, 0.12);
   padding: 2px 6px;
-  color: #ffb000;
-  border: 1px solid #CC8800;
+  color: var(--fg);
+  border: 1px solid var(--dim);
 }
 
 .markdown-body pre {
-  background: rgba(255, 176, 0, 0.05);
+  background: rgba(128, 80, 0, 0.07);
   padding: 16px;
   overflow-x: auto;
   margin-bottom: 16px;
-  border: 1px solid #CC8800;
+  border: 1px solid var(--dim);
 }
 
 .markdown-body img {
   max-width: 100%;
   display: block;
   margin: 24px 0;
-  border: 1px solid #ffb000;
+  border: 1px solid var(--fg);
 }
 
 .markdown-body blockquote {
-  border-left: 2px solid #ffb000;
+  border-left: 2px solid var(--fg);
   padding-left: 16px;
   margin: 24px 0;
-  color: #CC8800;
+  color: var(--dim);
   font-style: italic;
 }
 
-/* Markdown table column widths */
 .markdown-body table {
   width: 100%;
   table-layout: fixed;

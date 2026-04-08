@@ -102,12 +102,12 @@ export default async function LogPage({ params }: LogPageProps) {
       </header>
 
       {/* Content */}
-      <article className="markdown-body border-t border-black pt-8">
+      <article className="markdown-body border-t border-border pt-8">
         <MarkdownBody content={log.content} />
       </article>
 
       {/* Footer navigation */}
-      <footer className="mt-12 pt-6 border-t border-black">
+      <footer className="mt-12 pt-6 border-t border-border">
         <Link
           href="/logs/"
           className="text-sm underline hover:no-underline"

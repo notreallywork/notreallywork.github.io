@@ -16,14 +16,14 @@ const moodEmojis: Record<string, string> = {
 
 export function LogItem({ log }: LogItemProps) {
   return (
-    <article className="group border-b border-black py-4 hover:bg-hover-bg transition-colors duration-100">
+    <article className="group border-b border-border-dim/30 py-4 hover:bg-[var(--hover-bg)] transition-colors duration-100">
       <Link
         href={`/logs/${log.slug}/`}
         className="block px-2 -mx-2 no-underline"
       >
         <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-6">
           <DateBlock date={log.date} />
-          
+
           <div className="flex items-center gap-2 mt-1 sm:mt-0">
             <h3 className="text-base underline group-hover:no-underline">
               {log.title}
@@ -34,7 +34,7 @@ export function LogItem({ log }: LogItemProps) {
               </span>
             )}
           </div>
-          
+
           {log.tags.length > 0 && (
             <div className="text-xs font-mono text-muted mt-1 sm:mt-0 sm:ml-auto">
               {log.tags.join(', ')}
