@@ -199,20 +199,33 @@ a:hover {
   border-collapse: collapse;
 }
 
+.markdown-body th,
+.markdown-body td {
+  padding: 8px 12px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--chrome);
+}
+
+.markdown-body th {
+  color: var(--fg);
+  font-weight: 700;
+  border-bottom: 1px solid var(--dim);
+}
+
 .markdown-body th:first-child,
 .markdown-body td:first-child {
-  width: 45%;
+  width: 26%;
   text-align: left;
 }
 
 .markdown-body th:nth-child(2),
 .markdown-body td:nth-child(2) {
-  width: 25%;
+  width: 37%;
   text-align: left;
 }
 
 .markdown-body th:nth-child(3),
 .markdown-body td:nth-child(3) {
-  width: 30%;
+  width: 37%;
   text-align: left;
 }
