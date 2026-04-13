@@ -19,9 +19,7 @@ The evidence grid is the most considered design decision — three tiers (strong
 
 The garden metaphor threads all four sections: probiotics are seeds, prebiotics are fertiliser, postbiotics are fruit, synbiotics are seeds planted with their matched fertiliser. Chose a unifying metaphor and committed to it.
 
-The file is named `v4_reprise`. This was not the first attempt. The first three versions got iterated out of existence — presumably progressively stripping down, restructuring, or rebuilding the component until this one was right. The "reprise" suggests a restart after a direction change, not a linear refinement.
-
-**Technical notes:** Pure CSS + HTML + JS, no framework. Designed as an embed — uses CSS custom properties (`--color-background-primary`, `--color-text-primary`, `--font-sans`, `--border-radius-*`) inherited from the host page rather than defining its own. ~20 lines of JavaScript. Clean.
+**Technical notes:** Pure CSS + HTML + JS, no framework. Designed as an embed — uses CSS custom properties (`--color-background-primary`, `--color-text-primary`, `--font-sans`, `--border-radius-*`) inherited from the host page rather than defining its own. ~20 lines of JavaScript.
 
 ## What Copilot produced (v1)
 
@@ -42,7 +40,7 @@ Content is food-examples-first: yogurt, kefir, onions, bananas. No mechanism des
 | Interactivity | Custom JS, animated card transitions | `<details>`/`<summary>`, no JS |
 | Content depth | WHO/ISAPP citations, 3-tier evidence grading, mechanisms | Food examples, simplified definitions |
 | Coverage | All 4 types in equal depth | 3 types + synbiotics as footnote |
-| Iterations visible | v4 reprise — at least 4 refinement rounds | v1, single pass |
+| Iterations visible | Multiple refinement rounds | Single pass |
 | Audience assumption | Curious adult who wants the real science | Complete beginner |
 | Garden analogy | Yes — extended, each type mapped deliberately | Yes — listed, not developed |
 
