@@ -35,4 +35,4 @@ Drag the card, or press ← / →. Start dragging and dots on the meters show wh
 
 ## Stack
 
-Vite, TypeScript (strict), Preact and signals, PWA (installable, works offline). Procedural SVG avatars. Everything stays on-device in `localStorage`. No backend, no analytics, no network calls.
+Vite, TypeScript (strict), Preact and signals, PWA (installable, works offline). Procedural SVG avatars. Your game stays on-device in `localStorage`. The only network traffic is anonymous daily counters (runs, endings, achievements: no IDs, no cookies, opt-out in the game) on a Cloudflare Worker with D1.
